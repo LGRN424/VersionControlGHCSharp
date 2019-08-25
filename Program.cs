@@ -10,26 +10,28 @@ namespace J2P_CH3a
    {
       static void Main(string[] args)
       {
-         int secretNum = 5, guessNum;
+         int secretNum = 95, guessNum1 , guessNum2;
 
-         Console.WriteLine("Guess a number between 0 and 10: ");
-         guessNum = Int32.Parse(Console.ReadLine());
+         Console.WriteLine("Guess a number between 0 and 100: ");
+         guessNum1 = Int32.Parse(Console.ReadLine());
 
-         if (secretNum == guessNum)
+         Console.WriteLine("Guess a number between 0 and 100: ");
+         guessNum2 = Int32.Parse(Console.ReadLine());
+
+
+         if (secretNum == guessNum1 && secretNum == guessNum2 )
             Console.WriteLine("Great guess,you win!");
 
-         else if (secretNum > guessNum)
+         else if (secretNum > guessNum1 || secretNum > guessNum2)
             Console.WriteLine("Sorry too high!");
 
-         else if (secretNum < guessNum)
+         else if (secretNum < guessNum1 || secretNum < guessNum2)
             Console.WriteLine("Sorry too low!");
 
-         else
+         else 
             Console.WriteLine("You can play again later.");
 
-
-
-
+                 
          Console.ReadLine();
         
       }
